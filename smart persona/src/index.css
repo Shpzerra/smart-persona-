@@ -92,6 +92,12 @@ img { max-width: 100%; height: auto; }
 
 /* Ensure text sizes for desktop */
 .header-title { font-size: 1.75rem; }
+
+/* Reduce default header container padding so content (card) sits closer to header title */
+header > .container { padding-top: 8px; padding-bottom: 20px; }
+
+/* Slightly lift the first card inside the page wrapper to visually sit closer to the header */
+.page-wrapper > .container > .card { transform: translateY(-50px); }
 .card-title { font-size: 1.5rem; }
 
 @media (min-width: 768px) {
@@ -110,8 +116,8 @@ img { max-width: 100%; height: auto; }
 }
 
 /* Make the header text larger and with a subtle inner border */
-.site-header { border-bottom: 4px solid #0831b8; }
-.site-footer { border-top: 4px solid #0831b8; }
+.site-header { border-bottom: 4px solid ; }
+.site-footer { border-top: 0px solid ; }
 
 /* Slightly reduce card width on very wide screens to match screenshot spacing */
 @media (min-width: 1200px) {
@@ -216,7 +222,7 @@ img { max-width: 100%; height: auto; }
 /* LinkedIn style: blue brand, white text; make same size as Google */
 .provider-linkedin {
   background: #0A66C2;
-  color: #ffffff;
+  color: #050202;
   border: 1px solid rgba(0,0,0,0.06);
   justify-content:flex-start;
 }
@@ -238,7 +244,7 @@ img { max-width: 100%; height: auto; }
   justify-content: center;
   gap: 12px;
   width: 100%;
-  margin: 20px 0;
+  margin: 12px 0 8px 0;
 }
 .or-container::before,
 .or-container::after {
@@ -258,8 +264,184 @@ img { max-width: 100%; height: auto; }
   font-size: 0.85rem;
 }
 
+/* Facebook provider style */
+.provider-facebook { background: #fff; color: #111827; border: 1px solid #e6e7ee; }
+.provider-facebook .provider-left { position: absolute; left: 12px; width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; background:#0d5bd6; color:#fff; border-radius:6px; }
+.provider-facebook .provider-label { font-weight:700; text-align:center; width:100%; }
+
+/* Register full screen layout (no blue header/footer) */
+.register-fullscreen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 4vh 1rem;
+  position: relative;
+}
+.register-wrapper { width:100%; display:flex; align-items:center; justify-content:center; }
+.register-container { width:100%; max-width:520px; }
+.register-card { 
+  padding: 40px 56px; 
+  border-radius: 12px; 
+  border: 2px solid #2b2bd6; 
+  box-shadow: 0 18px 36px rgba(11,17,80,0.06);
+  max-width: 520px;
+  width: 100%;
+}
+.register-card .card-title { 
+  font-size: 1.8rem; 
+  margin-bottom: 8px; 
+  color: #111827; 
+  font-weight: 700;
+}
+.register-card .subtitle { 
+  color: #6b7280; 
+  font-size: 0.95rem; 
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* Make provider buttons full width inside register card */
+.register-card .provider-btn { 
+  width: 100%; 
+  padding: 12px 16px; 
+  margin-bottom: 8px; 
+  padding-left: 50px;
+  text-align: center;
+  justify-content: center;
+}
+.register-card .provider-left { left: 16px; }
+
+/* Slightly larger submit button */
+.register-card .btn-submit { 
+  padding: 11px 18px; 
+  border-radius: 28px;
+  margin-top: 18px;
+  width: 240px;
+}
+
 /* center the header title text properly */
 .header-title { font-weight: 700; color: #fff; }
+
+/* small brand title shown above the card (not in blue header) */
+.brand-title {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2b2bd6;
+  margin-bottom: 28px;
+  letter-spacing: -0.5px;
+}
+
+/* positioned back button at top-left */
+.back-btn {
+  position: absolute;
+  left: 32px;
+  top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  border-radius: 20px;
+  border: 2px solid #2b2bd6;
+  background: #fff;
+  color: #0b1b6b;
+  box-shadow: 0 6px 16px rgba(11,17,80,0.08);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.back-btn:hover {
+  background: #f9f9fc;
+  transform: translateY(-1px);
+}
+
+/* white submit button with purple outline and left icon */
+.register-card .btn-submit {
+  background: #fff;
+  border: 2px solid #2b2bd6;
+  color: #0b1b6b;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  padding: 11px 18px;
+  border-radius: 28px;
+  width: 240px;
+  margin: 18px auto 0;
+  box-shadow: 0 8px 18px rgba(11,17,80,0.08);
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.register-card .btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(11,17,80,0.12);
+}
+.register-card .btn-submit .icon {
+  display: inline-flex;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: #2b2bd6;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* fine-tune input sizes inside register card */
+.register-card .form-group { 
+  width: 100%; 
+  max-width: none;
+  margin: -25px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.register-card .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.register-card .form-label {
+  font-size: 0.9rem;
+  color: #374151;
+  text-align: left;
+  font-weight: 500;
+}
+.register-card .form-input { 
+  background: #fff; 
+  color: #111827; 
+  box-shadow: none;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+/* slightly adjust provider button visual to match screenshot */
+.register-card .provider-btn { 
+  box-shadow: none; 
+  border-radius: 8px; 
+  border: 1px solid rgba(11,17,80,0.08);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.register-card .provider-google { background: #fff; }
+.register-card .provider-linkedin { background: #fff; color: #111827; }
+.register-card .provider-facebook { background: #fff; color: #111827; }
+
+/* or-container in register card */
+.register-card .or-container {
+  margin: 10px 0 4px 0;
+  gap: 16px;
+}
+.register-card .or-text {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+}
 
 /* Form styles */
 .form-group {
@@ -510,4 +692,183 @@ button:focus-visible {
     padding: 0 10px; 
    
     background-color: white; 
+}
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #fff;
+  font-family: "Prompt", sans-serif;
+}
+
+.header-title {
+  text-align: center;
+  color: #2b3fe3;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.back-btn {
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  border: 2px solid #2b3fe3;
+  border-radius: 9999px;
+  padding: 6px 14px;
+  background: transparent;
+  color: #2b3fe3;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.back-btn:hover {
+  background-color: #f4f6ff;
+}
+
+.register-card {
+  border: 2px solid #2b3fe3;
+  border-radius: 16px;
+  padding: 32px;
+  width: 380px;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+}
+
+.card-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.provider-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.provider-btn {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.provider-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.icon-square {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+}
+.linkedin {
+  background: #0a66c2;
+}
+.facebook {
+  background: #1877f2;
+}
+
+.or-container {
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.or-container::before,
+.or-container::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: #ddd;
+  position: absolute;
+}
+.or-container::before {
+  left: 0;
+}
+.or-container::after {
+  right: 0;
+}
+.or-text {
+  background: #fff;
+  padding: 0 8px;
+  color: #777;
+  font-size: 0.85rem;
+  z-index: 1;
+}
+
+.form-group {
+  margin-top: 10px;
+  text-align: left;
+}
+.form-field {
+  margin-bottom: 12px;
+}
+.form-field label {
+  font-size: 0.85rem;
+  color: #333;
+  display: block;
+  margin-bottom: 4px;
+}
+.form-field input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+.form-field input:focus {
+  outline: none;
+  border-color: #2b3fe3;
+  box-shadow: 0 0 3px #2b3fe380;
+}
+
+.btn-submit {
+  width: 100%;
+  background: #2b3fe3;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.btn-submit:hover {
+  background: #1e2dc7;
+}
+
+.login-text {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 14px;
+}
+.link-brand {
+  color: #2b3fe3;
+  font-weight: 500;
+  text-decoration: none;
+}
+.link-brand:hover {
+  text-decoration: underline;
 }

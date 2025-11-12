@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function LoginPage() {
   return (
     <div className="page-root text-center">
-      <header className="site-header">
+      <header className="">
         <div className="container">
           <div className="header-title">PerFile</div>
         </div>
@@ -13,7 +13,7 @@ export default function LoginPage() {
       <main className="page-wrapper">
         <div className="container">
           <div className="card" role="region" aria-labelledby="login-title">
-            <h1 id="login-title" className="card-title font-bold mb-2">เข้าสู่ระบบ</h1>
+            <h1 id="login-title" className="card-title font-bold mb-2  ">เข้าสู่ระบบ</h1>
             <p className="mb-8 muted-small">ต้องการเข้าสู่ระบบด้วยอะไร?</p>
              
            <div className="form-field2">
@@ -67,7 +67,7 @@ export default function LoginPage() {
         </div>
       </main>
 
-      <footer className="site-footer"></footer>
+      
     </div>
   );
 }
