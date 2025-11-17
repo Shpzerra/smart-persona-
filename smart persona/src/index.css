@@ -48,7 +48,7 @@ img { max-width: 100%; height: auto; }
 .rounded-lg { border-radius: 8px; }
 .shadow { box-shadow: 0 6px 8px rgba(0,0,0,0.12); }
 .btn { border: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
-.btn-brand { background-color: #16174F; color: #ffffff; padding: 0.625rem 1rem; border-radius: 8px; }
+.btn-brand { background-color: #16174F; color: #ffffff; padding: 0.625rem 1rem; border-radius: 8px;  }
 .btn-brand .muted { opacity: 0.9; margin-right: 0.5rem; }
 .footer-brand { background-color: #16174F; height: 56px; }
 .header-brand { background-color: #16174F; color: #ffffff; }
@@ -145,13 +145,16 @@ header > .container { padding-top: 8px; padding-bottom: 20px; }
 
 /* Button appearance */
 .btn-brand {
-  background: linear-gradient(180deg,#17164b 0%, #201c67 100%);
-  color: #fff;
+  background: #ffffff; /* เปลี่ยนเป็นสีขาว */
+  color: #17164b; /* สีตัวอักษรเป็นเข้มเพื่ออ่านง่าย */
   padding: 14px 18px;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.06);
+  border: 1px solid rgba(31, 37, 218, 0.1); /* ปรับเส้นขอบให้อ่านง่ายบนพื้นขาว */
   transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
+  border: #2b2bd6 solid 2px;
+  
 }
+
 .btn-brand:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14,16,50,0.18); }
 .btn-brand:active { transform: translateY(0); }
 
