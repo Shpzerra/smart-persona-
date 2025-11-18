@@ -153,6 +153,7 @@ header > .container { padding-top: 8px; padding-bottom: 20px; }
   transition: transform 120ms ease, box-shadow 120ms ease, opacity 120ms ease;
   border: #2b2bd6 solid 2px;
   
+  
 }
 
 .btn-brand:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(14,16,50,0.18); }
@@ -232,7 +233,7 @@ header > .container { padding-top: 8px; padding-bottom: 20px; }
   gap:16px;
   
 }
-.provider-linkedin .provider-left { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; position: absolute; left: 3px; background: #084b86; border-radius:6px; }
+.provider-linkedin .provider-left { display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; position: absolute; left: 0px; background: #084b86; border-radius:6px; }
 .provider-linkedin .provider-label { font-weight:700; text-align:center; width:100%; }
 
 /* ensure both provider buttons visually equal width and centered */
@@ -767,6 +768,7 @@ button:focus-visible {
 }
 
 .register-card {
+  
   border: 2px solid #2b3fe3;
   border-radius: 16px;
   padding: 32px;
@@ -922,4 +924,23 @@ button:focus-visible {
   background: #ffffff !important;
   border-color: #6366f1 !important;
   box-shadow: 0 0 0 3px rgba(99,102,241,0.15) !important;
+}
+.top-right-text{
+ position: absolute;
+  top: -10px;       /* ดันขึ้นเหมือนในภาพ */
+  right: 100x;      /* ชิดขวา */
+  font-size: 14px;
+  color: #000000;   /* สีแดงตามภาพ */
+  cursor: pointer;
+  text-align:right
+}
+.top-right-text4 {
+  position: absolute;
+  top: 85px; 
+  right: 39%; 
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  text-align: right; 
+  z-index: 10; 
 }

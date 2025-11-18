@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   const [showPass, setShowPass] = useState(false);
@@ -13,14 +13,20 @@ export default function LoginPage() {
         <div className="container">
           <div className="header-title">PerFile</div>
         </div>
+         <button className="back-btn">
+        <span className="icon">⟵</span> กลับเข้าสู่หน้าหลัก
+      </button>
       </header>
 
       <main className="page-wrapper">
         <div className="container">
           <div className="card" role="region" aria-labelledby="login-title">
+            <div className="top-right-text">
+              <a href="http://localhost:4000/HRLogin">คุณเป็นผู้ประกอบการหรือเปล่า?</a>
+            </div>
             <h1 id="login-title" className="card-title font-bold mb-2  ">เข้าสู่ระบบ</h1>
             <p className="mb-8 muted-small">ต้องการเข้าสู่ระบบด้วยอะไร?</p>
-            
+
             <div className="provider-wrapper2">
               <button className="provider-btn provider-google" type="button">
                 <span className="provider-left" aria-hidden>
@@ -107,7 +113,7 @@ export default function LoginPage() {
         </div>
       </main>
 
-      
+
     </div>
   );
 }

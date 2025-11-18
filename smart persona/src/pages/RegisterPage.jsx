@@ -6,18 +6,17 @@ export default function RegisterPage() {
   const [showPass, setShowPass] = useState(false);
 
   return (
-   
-   <div className="register-fullscreen">
+
+    <div className="register-fullscreen">
       <div className="page-root text-center">
         <main className="page-wrapper">
           <div className="">
-            <button className="back-btn" type="button" aria-label="กลับสู่หน้าหลัก">
-              <span style={{display:'inline-flex',alignItems:'center',gap:8}}>
-                <span style={{display:'inline-flex',width:18,height:18,alignItems:'center',justifyContent:'center',borderRadius:6,border:'1px solid rgba(0,0,0,0.06)'}}>🔙</span>
-                กลับสู่หน้าหลัก
-              </span>
+            <button className="back-btn">
+              <span className="icon">⟵</span> กลับเข้าสู่หน้าหลัก
             </button>
-
+            <div className="top-right-text4">
+              <a href="http://localhost:4000/HRLogin">คุณเป็นผู้ประกอบการหรือเปล่า?</a>
+            </div>
             <div className="brand-title">PerFile</div>
 
             <div
@@ -25,6 +24,7 @@ export default function RegisterPage() {
               role="region"
               aria-labelledby="register-title"
             >
+
               <h1 id="register-title" className="card-title">
                 ลงทะเบียน
               </h1>

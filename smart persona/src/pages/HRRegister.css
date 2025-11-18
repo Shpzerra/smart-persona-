@@ -1,0 +1,159 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* layout หลัก */
+.register-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ปุ่มกลับ */
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 2px solid #1d2dbb;
+  background: white;
+  padding: 8px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.back-btn .icon {
+  margin-right: 6px;
+}
+
+/* ชื่อระบบ */
+.title {
+  margin-top: 60px;
+  font-size: 36px;
+  color: #2026c9;
+  font-weight: 700;
+}
+
+/* กล่องข้อมูล */
+.register-box {
+  position: relative;
+  margin-top: 20px;
+  width: 420px;
+  padding: 28px;
+  border: 2px solid #1d2dbb;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  background: #ffffff;
+}
+
+/* ข้อความบนขวา */
+.top-right-text {
+  position: absolute;
+  top: -22px;
+  right: 14px;
+  font-size: 14px;
+  color: #d13a3a;
+  cursor: pointer;
+  margin: 2px 20 0 10;
+}
+
+/* ชื่อฟอร์ม */
+.register-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #000000;
+}
+
+/* ข้อความเตือนแดง */
+.sub-warn {
+  color: #d13a3a;
+  font-size: 14px;
+  margin: 6px 0 10px 0;
+}
+
+/* ปุ่ม Google */
+.google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  color: #000000;
+}
+.google-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+/* เส้นแบ่ง */
+.divider {
+  text-align: center;
+  margin: 16px 0;
+  color: #888;
+}
+
+/* ฟอร์ม */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+}
+
+label {
+  color: #000;
+  margin-bottom: 4px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #a3a3a3;
+  font-size: 14px;
+  background: #ffffff; /* กล่องขาว */
+  color: #000; /* ตัวหนังสือดำ */
+}
+
+/* ปุ่มลงทะเบียน */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 10px;
+  border: 2px solid #1d2dbb;
+  cursor: pointer;
+  font-size: 16px;
+  color: #1d2dbb;
+  margin-top: 10px;
+}
+
+.login-text {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.login-text a {
+  color: #1e31d3;
+  text-decoration: none;
+}
+.top-right-text3{
+  position: absolute;
+  top: -10px; 
+  right: 16px;     /* ระยะจากขวาของกล่อง */
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+  text-align: right;
+  transform: translateY(-1px);
+}
+
