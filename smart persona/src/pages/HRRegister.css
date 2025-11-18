@@ -156,4 +156,30 @@ input {
   text-align: right;
   transform: translateY(-1px);
 }
+.divider{
+  
+    display: flex; 
+   
+    align-items: center; 
+    
+    margin: 20px 0; 
+    text-align: center;
+    font-size: 14px;
+    color: #888; 
+}
+.divider::before,
+.divider::after {
+    content: ''; 
+   
+    flex: 1; 
+     margin: 0 12px; 
+    border-bottom: 1px solid #ddd; 
+}
+
+.divider span {
+ 
+    padding: 0 10px; 
+    
+    background-color: white; 
+}
 
