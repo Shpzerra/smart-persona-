@@ -14,10 +14,10 @@ body {
 }
 
 /* ปุ่มกลับ */
-.back-btn {
+.back-btn1 {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 20px; /* จาก 20px → 40px ขยับไปทางขวา */
   border: 2px solid #1d2dbb;
   background: white;
   padding: 8px 14px;
@@ -26,11 +26,13 @@ body {
   font-size: 14px;
   display: flex;
   align-items: center;
+  color: #000000;
 }
 
-.back-btn .icon {
-  margin-right: 6px;
+.back-btn1 .icon {
+  margin-right: 12px;
 }
+
 
 /* ชื่อระบบ */
 .title {
@@ -134,11 +136,12 @@ input::placeholder {
 
 .top-right-text2{
   position: absolute;
-  top: 125px; /* ปรับระยะจากบนหน้า */
+  top: 156px; /* ปรับระยะจากบนหน้า */
   transform: translateY(-20px); 
-  right: calc(50% - 190px); /* เพราะกล่อง login กว้าง 380px */
+  right: calc(50% - 170px); /* เพราะกล่อง login กว้าง 380px */
   font-size: 14px;
   color: #000;
+  right: 658px;
 }
 .divider{
   

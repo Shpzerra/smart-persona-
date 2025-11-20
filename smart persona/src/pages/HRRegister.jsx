@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./HRRegister.css";
+import "../styles/HRRegister.css";
 import { Link } from "react-router-dom";
 
 export default function HRRegister() {
@@ -9,7 +9,7 @@ export default function HRRegister() {
     <div className="register-page">
 
       <button className="back-btn">
-        <span className="icon">⟵</span> กลับเข้าสู่หน้าหลัก
+        <span className="icon">⟵</span>กลับเข้าสู่หน้าหลัก
       </button>
 
       <h1 className="title">PerFile</h1>

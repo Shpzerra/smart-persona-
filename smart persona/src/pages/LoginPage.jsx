@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
+import "../styles/login.css";
 export default function LoginPage() {
   const [showPass, setShowPass] = useState(false);
 
@@ -97,10 +97,7 @@ export default function LoginPage() {
               ไม่เคยเข้าใช้งานใช่ไหม? <Link to="/register" className="link-brand font-semibold">ลงทะเบียน</Link>
             </p>
 
-            <p className="mt-4 text-xs text-gray-500 leading-relaxed max-w-xs text-center legal" style={{ margin: '0.75rem auto 0' }}>
-              การคลิกลงชื่อแสดงว่าคุณได้อ่านและยอมรับ <br />
-              <a href="#" className="link-brand">ข้อตกลงผู้ใช้</a> <a href="#" className="link-brand">นโยบายเกี่ยวกับข้อมูล</a> และ <a href="#" className="link-brand">นโยบายคุกกี้</a> ของ Smart Persona
-            </p>
+           
           </div>
         </div>
       </main>

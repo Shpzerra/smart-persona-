@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./HRLogin.css";
+import "../styles/HRLogin.css";
 import { Link } from "react-router-dom";
 
 export default function Login() {
@@ -8,7 +8,7 @@ export default function Login() {
   return (
     <div className="login-page">
 
-      <button className="back-btn">
+      <button className="back-btn1">
         <span className="icon">⟵</span> กลับเข้าสู่หน้าหลัก
       </button>
 
