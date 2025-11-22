@@ -54,7 +54,7 @@ body {
 /* ข้อความบนขวา */
 .top-right-text {
   position: absolute;
-  top: -22px;
+  top: -25px;
   right: 14px;
   font-size: 14px;
   color: #ff0000;

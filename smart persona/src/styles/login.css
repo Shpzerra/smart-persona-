@@ -161,5 +161,27 @@
 .google-login svg {
     margin-left: -30px;
 }
+.password-wrapper {
+    position: relative;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px; 
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    outline: none;
+}
+
+.password-toggle:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 
 
