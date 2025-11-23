@@ -1,0 +1,101 @@
+/* ProfileCard.css */
+
+/* 1. สไตล์ของ Container หลักของการ์ด */
+.profile-card {
+    background-color: #ffffff; /* พื้นหลังสีขาว */
+    border-radius: 20px; /* มุมโค้งมน */
+    padding: 20px;
+    width: 300px; /* กำหนดความกว้างของการ์ด */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* เงาทำให้การ์ดดูนูนขึ้น */
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative; /* เพื่อให้ bookmark วางตำแหน่งได้ง่าย */
+    text-align: center;
+    transition: transform 0.2s; /* เพิ่ม Animation เล็กน้อย */
+}
+
+.profile-card:hover {
+    transform: translateY(-3px); /* เมื่อเมาส์ชี้ การ์ดจะลอยขึ้นเล็กน้อย */
+}
+
+/* 2. สไตล์ของ Bookmark icon */
+.card-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* ให้ไอคอนอยู่ด้านขวา */
+    margin-bottom: 10px;
+}
+
+.bookmark-icon {
+    width: 24px;
+    height: 24px;
+    color: #999999; /* สีไอคอน */
+    cursor: pointer;
+}
+
+/* 3. ส่วนข้อมูลโปรไฟล์ */
+.profile-info-section {
+    padding: 0 10px;
+}
+
+.profile-avatar-container {
+    /* สร้างกรอบวงกลม */
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    border: 3px solid #e0f7fa; /* ขอบสีอ่อนรอบรูป */
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.profile-position {
+    font-size: 0.85em;
+    color: #666666;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.profile-experience {
+    font-size: 0.75em;
+    color: #999999;
+    font-weight: 500;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eeeeee; /* เส้นแบ่งบางๆ */
+}
+
+/* 4. ส่วน Skill Tags */
+.skill-tags-container {
+    display: flex;
+    flex-wrap: wrap; /* ให้ Tags ขึ้นบรรทัดใหม่ได้ */
+    justify-content: center;
+    gap: 8px; /* ระยะห่างระหว่างปุ่ม */
+    margin-top: auto; /* ดันให้อยู่ด้านล่างสุด */
+}
+
+.skill-tag {
+    background-color: #e0f7fa; /* สีพื้นหลังปุ่ม (ฟ้าอ่อน) */
+    color: #00bcd4; /* สีตัวอักษรปุ่ม (ฟ้าเข้ม) */
+    padding: 5px 12px;
+    border-radius: 15px; /* ทำให้เป็นรูปแคปซูล */
+    font-size: 0.7em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: default;
+}
